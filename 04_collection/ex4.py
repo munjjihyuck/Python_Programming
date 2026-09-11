@@ -129,11 +129,12 @@ stocks = (
     ("체리", 5000, 2),
 )
 
-a = tuple(zip(*stocks))
-print(a)
-
-result = tuple(a[1][i] * a[2][i] for i in range(3))
+# a = tuple(zip(*stocks))
+# result = tuple(a[1][i] * a[2][i] for i in range(3))
 # 총 재고 금액 출력
 print(sum(result))
 
+total = sum(price * qty for _, price, qty in stocks)
+
 # ✅ 총액: 21,000원
+print(f"총액: {total:,}원")
