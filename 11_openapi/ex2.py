@@ -128,10 +128,7 @@ def get_food_info(KEY, sc_code, schul_code, mlsv_ymd=base_date):
 
         # 급식정보 출력
         print(f"{base_date}")
-        # pprint.pprint(f"{data['mealServiceDietInfo'][1]['row']['DDISH_NM']}")
-        # print(data['mealServiceDietInfo'][1]['row']['DDISH_NM'])
-        # for i in data['mealServiceDietInfo'][1]['row']:
-        #     print(i)
+        pprint.pprint(data['mealServiceDietInfo'][1]['row'][0]['DDISH_NM'])
    
     except requests.exceptions.Timeout as e:
         print(f"서버 응답시간 초과: {e}")
